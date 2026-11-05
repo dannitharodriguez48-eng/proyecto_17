@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 550px;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+h1 {
+    margin-bottom: 8px;
+    color: #a82030;
+    font-size: 26px;
+}
+
+.descripcion {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.formulario {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+#nueva-tarea {
+    flex: 1;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#nueva-tarea:focus {
+    outline: 2px solid #c62838;
+    border-color: #c62838;
+}
+
+.agregar {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #c62838;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.agregar:hover {
+    background-color: #a82030;
+}
+
+#lista {
+    list-style: none;
+}
+
+#lista li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 5px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+#lista li span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #c62838;
+    cursor: pointer;
+}
+
+#lista li.completada span {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.eliminar {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c62838;
+    color: white;
+    cursor: pointer;
+}
+
+.eliminar:hover {
+    background-color: #a82030;
+}
+
+.vacia {
+    color: #888;
+    text-align: center;
+    padding: 15px 5px;
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .formulario {
+        flex-direction: column;
+    }
+
+    .agregar {
+        width: 100%;
+    }
+}
